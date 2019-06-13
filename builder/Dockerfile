@@ -17,4 +17,4 @@ RUN \
 	apk del git build-base autoconf pcre openssl-dev zlib-dev --purge && \ 
 	rm -rf /var/cache/apk/*
 VOLUME [ "/tmp/volume" ] 
-ENTRYPOINT [ "cp", "-r", "/tmp/artifacts/.", "/tmp/volume" ]
+ENTRYPOINT [ "cp", "-rp", "/tmp/artifacts/.", "/tmp/volume" ]
