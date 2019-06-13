@@ -4,7 +4,7 @@ RUN \
 	apk update && \
 	apk add tzdata make && \ 
 	cp -r -f /usr/share/zoneinfo/Europe/Amsterdam /etc/localtime && \
-	adduser -g "pennmush user" -s /bin/sh -D pennmush && \
+	adduser -g "pennmush user" -s /bin/sh -D pennmush -u 1000 && \
 	su - pennmush && \
 	mkdir /home/pennmush/game && \
 	echo "cd /home/pennmush/game && ./restart && tail -F /home/pennmush/game/log/netmush.log" > /home/pennmush/entrypoint.sh && \
