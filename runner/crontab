@@ -1,0 +1,1 @@
+0 4 * * * pennmush sh /home/pennmush/backup/penback.sh
