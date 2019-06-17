@@ -6,7 +6,8 @@ RUN \
 	cp -r -f /usr/share/zoneinfo/Europe/Amsterdam /etc/localtime && \
 	adduser -g "pennmush user" -s /bin/sh -D pennmush -u 1000 && \
 	su - pennmush && \
-	mkdir /home/pennmush/game
+	mkdir /home/pennmush/game && \
+  rm -rf /var/cache/apk/*
 ADD entrypoint.sh /home/pennmush/entrypoint.sh
 RUN \
 	chown -R pennmush:pennmush /home/pennmush && \
